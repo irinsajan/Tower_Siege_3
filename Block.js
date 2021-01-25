@@ -1,6 +1,7 @@
 class Block extends BaseClass {
     constructor(x, y, width, height){
       super(x,y,width,height);
+        this.Visibility = 255;
       
     }
 
@@ -11,15 +12,15 @@ class Block extends BaseClass {
       else{
         World.remove(world,this.body);
         push();
-        this.Visiblity = this.Visiblity - 2;
-        tint(255,this.Visiblity);
+        this.Visibility = this.Visibility - 2;
+        tint(255,this.Visibility);
         pop();
         
       }
     }
 
     score() {
-      if(this.visibility<0 && this.visibility>-1005) {
+      if(this.Visibility<0 && this.Visibility>-105) {
           score++;
       }
     }
